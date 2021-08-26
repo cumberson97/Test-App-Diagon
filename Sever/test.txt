@@ -1,0 +1,159 @@
+Container(
+              padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+              child: Builder(
+                  builder: (context) => Form(
+                        key: _key,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Padding(
+                                padding: EdgeInsets.all(4),
+                                child: TextFormField(
+                                    decoration: InputDecoration(
+                                        labelText: 'Name',
+                                        border: OutlineInputBorder()),
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return 'Input needed';
+                                      } else {
+                                        return null;
+                                      }
+                                    },
+                                    onSaved: (val) =>
+                                        setState(() => name = val.toString()))),
+                            Padding(
+                                padding: EdgeInsets.all(4),
+                                child: TextFormField(
+                                    decoration: InputDecoration(
+                                        labelText: 'Student ID',
+                                        border: OutlineInputBorder()),
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return 'Input needed';
+                                      } else {
+                                        return null;
+                                      }
+                                    },
+                                    onSaved: (val) => setState(
+                                        () => id = int.parse(val.toString())))),
+                            Padding(
+                                padding: EdgeInsets.all(4),
+                                child: TextFormField(
+                                    decoration: InputDecoration(
+                                        labelText: 'Age',
+                                        border: OutlineInputBorder()),
+                                    validator: (value) {
+                                      if (value == null || value.isEmpty) {
+                                        return 'Input needed';
+                                      } else {
+                                        return null;
+                                      }
+                                    },
+                                    onSaved: (val) => setState(() =>
+                                        age = int.parse(val.toString())))),
+                            Expanded(
+                                child: ListView.builder(
+                              itemCount: counter,
+                              itemBuilder: (context, index) {
+                                int number = counter;
+                                return Card(
+                                    child: Column(children: <Widget>[
+                                  Text(
+                                    'Course',
+                                  ),
+                                  Padding(
+                                      padding: EdgeInsets.all(1),
+                                      child: TextFormField(
+                                          decoration: InputDecoration(
+                                              labelText: 'Course Title',
+                                              border: OutlineInputBorder()),
+                                          validator: (value) {
+                                            if (value == null ||
+                                                value.isEmpty) {
+                                              return 'Input needed';
+                                            } else {
+                                              return null;
+                                            }
+                                          },
+                                          onSaved: (val) => setState(() =>
+                                              holder.courseCode =
+                                                  val.toString()))),
+                                  Padding(
+                                      padding: EdgeInsets.all(1),
+                                      child: TextFormField(
+                                          decoration: InputDecoration(
+                                              labelText: 'Course Code',
+                                              border: OutlineInputBorder()),
+                                          validator: (value) {
+                                            if (value == null ||
+                                                value.isEmpty) {
+                                              return 'Input needed';
+                                            } else {
+                                              return null;
+                                            }
+                                          },
+                                          onSaved: (val) => setState(() =>
+                                              holder.courseTitle =
+                                                  val.toString())))
+                                ]));
+                              },
+                            )),
+                            Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 8),
+                                child: Row(children: [
+                                  Padding(
+                                      padding: EdgeInsets.all(15),
+                                      child: ElevatedButton.icon(
+                                          onPressed: () {
+                                            final form = _key.currentState;
+                                            setState(() {
+                                              if (counter < 5) {
+                                                form!.save();
+                                                courses.add(holder);
+                                                counter = counter + 1;
+                                              } else {}
+                                            });
+                                          },
+                                          icon: Icon(Icons.add_circle_sharp),
+                                          label: Text('Add Course      '))),
+                                  Padding(
+                                      padding: EdgeInsets.all(8),
+                                      child: ElevatedButton.icon(
+                                          onPressed: () {
+                                            setState(() {
+                                              if (counter > 1) {
+                                                courses.remove(holder);
+                                                counter = counter - 1;
+                                              } else {}
+                                            });
+                                          },
+                                          icon: Icon(Icons.remove_circle_sharp),
+                                          label: Text('Remove Course')))
+                                ])),
+                            Padding(
+                                padding: EdgeInsets.all(2),
+                                child: ElevatedButton.icon(
+                                    onPressed: () {
+                                      final form = _key.currentState;
+                                      if (form!.validate()) {
+                                        form.save();
+                                        setState(() {
+                                          //print("${holder.courseCode}");
+                                          courses.add(holder);
+                                          student = Student(
+                                              name: name,
+                                              id: id,
+                                              age: age,
+                                              courses: courses);
+
+                                          list.add(student);
+                                          DataLoader.addStudent(student);
+                                        });
+                                      }
+                                    },
+                                    icon: Icon(Icons.check_circle),
+                                    label: Text('Submit')))
+                          ],
+                        ),
+                      )),
+            )

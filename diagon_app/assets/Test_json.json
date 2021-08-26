@@ -1,0 +1,183 @@
+[{
+        "name": "Tim John",
+        "age": 16,
+        "id": 816011145,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }
+        ]
+    },
+    {
+        "name": "Jim Lohn",
+        "age": 18,
+        "id": 816011146,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }
+        ]
+    }, {
+        "name": "Larry King",
+        "age": 22,
+        "id": 815016146,
+        "courses": [{
+                "courseCode": "comp2606",
+                "courseTitle": "Software Engineering"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }
+        ]
+    }, {
+        "name": "Bradford Kelman",
+        "age": 18,
+        "id": 816102185,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }, {
+                "courseCode": "comp2606",
+                "courseTitle": "Software Engineering"
+            }
+        ]
+    },
+    {
+        "name": "Angel John",
+        "age": 24,
+        "id": 816212145,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }, {
+                "courseCode": "comp2606",
+                "courseTitle": "Software Engineering"
+            },
+            {
+                "courseCode": "FOUN3445",
+                "courseTitle": "Law and Governance"
+            }
+        ]
+    },
+    {
+        "name": "Kim Burrel",
+        "age": 23,
+        "id": 816122145,
+        "courses": [{
+                "courseCode": "Math2117",
+                "courseTitle": "Calculus 2"
+            },
+            {
+                "courseCode": "Math1116",
+                "courseTitle": "Calculus 1"
+            }, {
+                "courseCode": "comp2606",
+                "courseTitle": "Software Engineering"
+            },
+            {
+                "courseCode": "FOUN3445",
+                "courseTitle": "Law and Governance"
+            }
+        ]
+    },
+    {
+        "name": "Ford Li",
+        "age": 21,
+        "id": 816111145,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1602",
+                "courseTitle": "Programming 2"
+            }
+        ]
+    }, {
+        "name": "Arron Cumberbatch",
+        "age": 24,
+        "id": 816112145,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }, {
+                "courseCode": "comp2606",
+                "courseTitle": "Software Engineering"
+            },
+            {
+                "courseCode": "FOUN3445",
+                "courseTitle": "Law and Governance"
+            }
+        ]
+    },
+    {
+        "name": "Lynn White",
+        "age": 20,
+        "id": 816514145,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1601",
+                "courseTitle": "Programming 1"
+            }, {
+                "courseCode": "comp2606",
+                "courseTitle": "Software Engineering"
+            },
+            {
+                "courseCode": "FOUN3445",
+                "courseTitle": "Law and Governance"
+            }, {
+                "courseCode": "PHYS2022",
+                "courseTitle": "Mechanics"
+            }
+
+        ]
+    }, {
+        "name": "Fedrick Jonas",
+        "age": 19,
+        "id": 816012145,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            },
+            {
+                "courseCode": "comp1602",
+                "courseTitle": "Programming 2"
+            }
+        ]
+    }, {
+        "name": "Zayn Joas",
+        "age": 25,
+        "id": 815013165,
+        "courses": [{
+                "courseCode": "comp2605",
+                "courseTitle": "Data structures"
+            }
+
+        ]
+    }
+
+]
